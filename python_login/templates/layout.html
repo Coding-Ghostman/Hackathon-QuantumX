@@ -1,0 +1,22 @@
+<!-- layout template for home and profile template -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>{% block title %}{% endblock %}</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+   </head>
+   <body class="loggedin">
+      <nav class="navtop">
+         <div>
+            <h1>TECHSANDS</h1>
+            <div class="home_page">{% block home_page %}{% endblock %}</div>
+            <div class="admin_page">{% block admin_page %}{% endblock %}</div>
+            <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+         </div>
+      </nav>
+      <div class="content">{% block content %}{% endblock %}</div>
+      <div class="status">{% block status %}{% endblock %}</div>
+   </body>
+</html>

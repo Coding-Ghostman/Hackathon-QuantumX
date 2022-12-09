@@ -1,0 +1,7 @@
+<!--Admin template restricted for log in users -->
+{% extends 'layout.html' %} {% block title %}Admin{% endblock %} {% block home_page %}
+<a href="{{ url_for('admin') }}"><i class="fas fa-home"></i>Home</a>
+{% endblock %} {% block admin_page %}<a href="{{ url_for('admin_profile') }}"><i class="fas fa-user-circle"></i>Profile</a>{% endblock %} {% block content %}
+<h2>Admin Page</h2>
+<p>Welcome back administrator, {{ username }}!</p>
+{% endblock %}

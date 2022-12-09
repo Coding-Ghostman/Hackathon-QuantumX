@@ -1,0 +1,10 @@
+<!--Home template restricted for log in users -->
+{% extends 'layout.html' %} {% block title %}Home{% endblock %} {% block home_page %}
+<a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+{% endblock %} {% block admin_page %}<a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>{% endblock %} {% block content %}
+<h2>Home Page</h2>
+<p>Welcome back, {{ username }}!</p>
+{% endblock %} {%block status%}
+<h2>Status</h2>
+<p>{{ email }}</p>
+{% endblock %}
